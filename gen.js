@@ -7,10 +7,8 @@
 
 function gen() {
   var elm = document.getElementById("passcode");
-  var p = p; // This is for each password in the future. A number will get appended.
-  for(let n = 1; n <= 4; n++) {
-    eval("var p" + n + " = Math.floor((Math.random() * 9));"); // This makes a random number that gets the loop number appended to the variable. I need to find an eval() alternative.
-  }
-  elm.innerHTML = `Your passcode is: ${p1}${p2}${p3}${p4}`;
+  var pin = Math.floor(Math.random() * Math.floor(max)); // This makes a random number that gets the loop number appended
+                                                        // to the variable. I need to find an eval() alternative
+  elm.innerHTML = `Your passcode is: ${pin}`;
   console.log("We have lift off.");
 }
