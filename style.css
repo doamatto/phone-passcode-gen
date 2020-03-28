@@ -3,25 +3,25 @@
 }
 
 body {
-    height: 100%;
-    margin: 0;
     background: rgb(2,0,36); /* Fallback if browser doesn't support gradients */
     background: linear-gradient(25deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 10%, rgba(0,212,255,1) 100%) fixed; 
     font-family: 'Inter', sans-serif;
+    height: 100%;
+    margin: 0;
 }
 
 .centre {
-    width: 100%;
-    height: 100%;
-    display: flex;
     align-items: center;
+    display: flex;
+    height: 100%;
     justify-content: center;
+    width: 100%;
 }
 
 #tool {
-    padding: 1em 1em 1em 1em;
     background: #fff;
     border-radius: 2em;
-    width: 50%;
+    padding: 1em 1em 1em 1em;
     text-align: center;
+    width: 50%;
 }
