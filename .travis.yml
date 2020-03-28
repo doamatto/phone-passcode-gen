@@ -1,8 +1,9 @@
 language: node_js
+node_js:
+  - "7"
 cache:
   directories:
     - "node_modules"
-sudo: false
 
 before_install:
   - npm install eslint babel-eslint eslint-plugin-react babel-cli \
@@ -15,7 +16,7 @@ script:
 
 deploy:
   provider: pages
-  skip_cleanup: false
+  cleanup: true
   github_token: $GITHUB_TOKEN
   keep_history: true
   on:
