@@ -5,8 +5,9 @@ cache:
   directories:
     - "node_modules"
 script:
-  - npm install jshint
+  - npm install jshint csslint
   - jshint gen.js
+  - csslint style.css
 
 deploy:
   provider: pages
