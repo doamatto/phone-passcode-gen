@@ -1,0 +1,22 @@
+language: node_js
+cache:
+  directories:
+    - "node_modules"
+sudo: false
+
+before_install:
+  - npm install eslint babel-eslint eslint-plugin-react babel-cli \
+                babel-plugin-transform-object-rest-spread \
+                babel-preset-env babel-preset-stage-0 \
+                eslint-config-google escope
+
+script:
+  - "npm run lint"
+
+deploy:
+  provider: pages
+  skip_cleanup: false
+  github_token: $GITHUB_TOKEN
+  keep_history: true
+  on:
+    branch: master
