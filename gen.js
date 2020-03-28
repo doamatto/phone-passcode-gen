@@ -1,11 +1,12 @@
-// Developed in 16:43.67 by doamatto
-// Licensed under GPL v3
-/*
-/* This was built to make a random restrictions
-/* passcode for my iPad out of bordem.
-*/
-
 function gen() {
+  try { // Check if you can turn the pincount into a number. If not, fail.
+    var n = Number(document.getElementById("pincount").value);
+  } catch (err) {
+    return console.error("The number of numbers provided is not a real integer.");
+  }
+  if (n <= 0) { // Check if provided number is less than 0. If not, succeed.
+    return console.error("The number of numbers prvoided is equal to or less than 0.");
+  }
   if(!document.getElementById("pincount").value) { // Check if you've provided the amount of digits for your PIN
     c = 6; // Default to 6 digits
   } else {
@@ -36,3 +37,14 @@ function noError() {
   return;
 }
 
+function handlingError(msg, url, line) {
+  console.error("Error logged locally for when announced to user.");
+  var elm = document.getElementById("errorText");
+  elm.innerHTML = (`An error has occured on line ${line} of ${url}. The following is what was captured: ${msg}`);
+  document.getElementById("error").style.display = "block";
+  document.genElementById("gen").style.display = "none";
+}
+
+window.onerror = function (msg, url, line) {
+  handlingError(msg, url, line);
+}
