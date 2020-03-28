@@ -48,8 +48,8 @@ input[type=text] {
 }
 
 .passcode {
-    word-break: break-all;
     white-space: normal;
+    word-break: break-all;
 }
 
 .tool {
