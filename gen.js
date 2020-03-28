@@ -11,7 +11,7 @@ function gen() {
     c = 6;
   }
   var i; // Used for variable looping
-  var num = new Array(); // Defines array for passcode
+  var num = []]; // Defines array for passcode
   var elm = document.getElementById("passcode"); // For easier calling of the passcode element later
 
   for (i=0; i<c; i++) {
