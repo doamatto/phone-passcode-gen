@@ -5,11 +5,11 @@
 body {
     background: rgb(2,0,36); /* Fallback if browser doesn't support gradients */
     background: linear-gradient(25deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 10%, rgba(0,212,255,1) 100%) fixed; 
-}
-
-.centre {
+    
+    max-width: 40em;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex: 0 0 120px;
+
+    font-family: 'Inter', sans-serif;
 }
