@@ -18,6 +18,14 @@ body {
     display: none;
 }
 
+input[type=text] {
+    border: 1px solid black;
+    border-radius: 1em;
+    padding-bottom: .25em;
+    padding-left: 1em;
+    padding-top: .25em;
+}
+
 .tool {
     background: #fff;
     border-radius: 2em;
