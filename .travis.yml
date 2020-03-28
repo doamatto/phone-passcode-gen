@@ -5,8 +5,8 @@ cache:
   directories:
     - "node_modules"
 script:
-  - npm install eslint babel-eslint babel-cli
-  - "npm run lint"
+  - npm install jshint
+  - jshint gen.js
 
 deploy:
   provider: pages
