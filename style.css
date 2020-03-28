@@ -47,6 +47,11 @@ input[type=text] {
     padding-top: .25em;
 }
 
+.passcode {
+    word-break: break-all;
+    white-space: normal;
+}
+
 .tool {
     background: #fff;
     border-radius: 2em;
