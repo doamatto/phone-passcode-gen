@@ -2,6 +2,9 @@ function gen() {
   try { // Check if you can turn the pincount into a number. If not, fail.
     var n = Number(document.getElementById("pincount").value);
   } catch (err) {
+    return console.error("The number of numbers provided could not be converted into an integer.");
+  }
+  if (isNaN(n)) {
     return console.error("The number of numbers provided is not a real integer.");
   }
   if (n <= 0) { // Check if provided number is less than 0. If not, succeed.
