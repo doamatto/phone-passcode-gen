@@ -1,9 +1,30 @@
+a {
+    color: #000;
+    transition: .5s ease-in-out all;
+}
+
+a:hover {
+    color: #090979;
+    text-decoration: none;
+}
+
 body {
-    background: rgb(2,0,36); /* Fallback if browser doesn't support gradients */
-    background: linear-gradient(25deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 10%, rgba(0,212,255,1) 100%) fixed; 
+    background: #020024; /* Fallback if browser doesn't support gradients */
+    background: linear-gradient(25deg, #020024 0%, #090979 10%, #00d4ff 100%) fixed; 
     font-family: 'Inter', sans-serif;
     height: 100%;
     margin: 0;
+}
+
+.button {
+    border: 1px solid #000;
+    border-radius: 1em;
+    transition: .5s ease-in-out all;
+}
+
+.button:hover {
+    background: #090979;
+    color: #fff;
 }
 
 .centre {
