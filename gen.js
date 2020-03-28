@@ -6,9 +6,10 @@
 */
 
 function gen() {
-  var c = document.getElementById("pincount").value; // Take the number of numbers you want
-  if(!c) {
-    c = 6;
+  if(!document.getElementById("pincount").value) { // Check if you've provided the amount of digits for your PIN
+    c = 6; // Default to 6 digits
+  } else {
+    c = document.getElementById("pincount").value; // Take the number of numbers you want
   }
   var i; // Used for variable looping
   var num = []; // Defines array for passcode
