@@ -4,14 +4,8 @@ node_js:
 cache:
   directories:
     - "node_modules"
-
-before_install:
-  - npm install eslint babel-eslint eslint-plugin-react babel-cli \
-                babel-plugin-transform-object-rest-spread \
-                babel-preset-env babel-preset-stage-0 \
-                eslint-config-google escope
-
 script:
+  - npm install eslint babel-eslint babel-cli
   - "npm run lint"
 
 deploy:
