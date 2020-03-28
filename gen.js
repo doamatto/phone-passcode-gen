@@ -4,6 +4,7 @@ function gen() {
   } catch (err) {
     return console.error("The number of numbers provided could not be converted into an integer.");
   }
+  var n = Number(document.getElementById("pincount").value);
   if (isNaN(n)) {
     return console.error("The number of numbers provided is not a real integer.");
   }
@@ -50,4 +51,4 @@ function handlingError(msg, url, line) {
 
 window.onerror = function (msg, url, line) {
   handlingError(msg, url, line);
-}
+};
