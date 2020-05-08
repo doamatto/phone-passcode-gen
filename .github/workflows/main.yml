@@ -16,9 +16,9 @@ jobs:
       
     - name: js-lint
       run: |
-        npm i jshint,
+        npm i jshint
         jshint gen.js.
     - name: css-lint
       run: |
-        npm i csslint,
+        npm i csslint
         csslint style.css
