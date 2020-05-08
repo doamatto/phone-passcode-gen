@@ -1,5 +1,5 @@
 # Passcode Generator
 
-[![Build Status](https://travis-ci.org/doamatto/phone-passcode-gen.svg?branch=master)](https://travis-ci.org/doamatto/phone-passcode-gen)
+![CI](https://github.com/doamatto/phone-passcode-gen/workflows/CI/badge.svg)
 
 A simple passcode generator.
