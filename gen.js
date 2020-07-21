@@ -3,8 +3,10 @@ function gen() {
   var n;
   try { // Check if you can turn the pincount into a number. If not, fail.
     n = Number(pCount);
-  } catch (err)
-  return console.error("The number of numbers provided could not be converted into an integer.");
+  } catch (err) {
+    return console.error("The number of numbers provided could not be converted into an integer.");
+  }
+
   if (isNaN(n)) return console.error("The number of numbers provided is not a real integer.");
   if (n <= 0) return console.error("The number of numbers prvoided is equal to or less than 0."); // Check if provided number is less than 0. If not, succeed.
   if(!pCount) { // Check if you've provided the amount of digits for your PIN
