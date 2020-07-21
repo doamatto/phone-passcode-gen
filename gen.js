@@ -33,7 +33,7 @@ function gen() {
 function noError() {
   var elm = document.getElementById("error");
   return elm.style.display = "none";
-}); // If an error doesn't happen, this function simply hides the error elements.
+}; // If an error doesn't happen, this function simply hides the error elements.
 
 function handlingError(msg, url, line => {
   console.error("Error logged locally for when announced to user.");
