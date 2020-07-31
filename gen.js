@@ -1,45 +1,58 @@
 function gen () {
   var pCount = document.getElementById('pincount').value
-  var n, c
-  try { // Check if you can turn the pincount into a number. If not, fail.
-    n = Number(pCount)
-  } catch (err) {
-    return console.error('The number of numbers provided could not be converted into an integer.')
-  }
+  var c;
+  var num = [];
 
-  if (isNaN(n)) return console.error('The number of numbers provided is not a real integer.')
-  if (n <= 0) return console.error('The number of numbers prvoided is equal to or less than 0.') // Check if provided number is less than 0. If not, succeed.
-  if (!pCount) { // Check if you've provided the amount of digits for your PIN
-    c = 6 // Default to 6 digits
+  // Check if value isn't blank
+  if(pCount === "" || pCount === undefined || pCount === null) {
+    c = 6 // Default to a six-digit pin
   } else {
-    c = pCount // Take the number of numbers you want
-  }
-  var i, num // Used for variable looping and defines array for passcode
-  var elm = document.getElementById('passcode') // For easier calling of the passcode element later
-
-  for (i = 0; i < c; i++) {
-    num[i] = Math.floor(Math.random() * Math.floor(9)) // Generate one number
+    c = pCount // Pass-forward
   }
 
-  var pin = num.toString() // Turns array into string
-  pin = pin.replace(/,/g, '') // Removes commas in array string
+  // Check if value is a number
+  try {
+    var n = Number(c)
+    if (isNaN(n))
+      return console.error('Placeholder to throw error')
+  } catch (e) {
+    return console.error('The number of numbers provided couldn\'t be converted to or isn\'t a real number')
+  }
 
-  document.getElementById('gen').style.display = 'block' // Makes passcode visible;
-  noError() // Reports no issue occuring
-  elm.innerHTML = `Your passcode is: ${pin}` // Brings PIN into document
-  pin = null // Resets PIN variable to reduce some peeking
+  // Check if value is a usable number (negative numbers)
+  if (c <= 0)
+    return console.error('The number of numbers prvoided is equal to or less than 0.')
+
+  // Ensures number is a whole number by rounding
+  c = Math.round(c)
+
+  // Generate numbers and ensures each is a whole number
+  for (var i = 0; i < c; i++) {
+    num[i] = Math.floor(Math.random() * Math.floor(9))
+  }
+
+  // Converts numbers generated into a usable string
+  var pin = num.toString()
+  pin = pin.replace(/,/g, '') // Removes commas from old array
+
+  // Put passcode into document
+  document.getElementById('gen').style.display = 'block'
+  document.getElementById('passcode').innerHTML = `Your passcode is: ${pin}`
+
+  // Wipe variables used in math
+  c = null
+  n = null
+  num = null
+  i = null
+  pin = null
 }
-
-function noError () {
-  document.getElementById('error').style.display = 'none'
-} // If an error doesn't happen, this function simply hides the error elements.
 
 function handlingError (msg, url, line) {
   console.error('Error logged locally for when announced to user.')
-  var elm = document.getElementById('errorText')
+  var elm = document.getElementById('error')
   elm.innerHTML = (`An error has occured on line ${line} of ${url}. The following is what was captured: ${msg}`)
-  document.getElementById('error').style.display = 'block'
-  document.genElementById('gen').style.display = 'none'
+  elm.style.display = 'block'
+  document.getElementById('passcode').style.display = 'none'
 }
 
 window.onerror = (msg, url, line) => {
