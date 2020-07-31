@@ -1,10 +1,10 @@
 function gen () {
   var pCount = document.getElementById('pincount').value
-  var c;
-  var num = [];
+  var c
+  var num = []
 
   // Check if value isn't blank
-  if(pCount === "" || pCount === undefined || pCount === null) {
+  if (pCount === '' || pCount === undefined || pCount === null) {
     c = 6 // Default to a six-digit pin
   } else {
     c = pCount // Pass-forward
@@ -13,15 +13,13 @@ function gen () {
   // Check if value is a number
   try {
     var n = Number(c)
-    if (isNaN(n))
-      return console.error('Placeholder to throw error')
+    if (isNaN(n)) { return console.error('Placeholder to throw error') }
   } catch (e) {
     return console.error('The number of numbers provided couldn\'t be converted to or isn\'t a real number')
   }
 
   // Check if value is a usable number (negative numbers)
-  if (c <= 0)
-    return console.error('The number of numbers prvoided is equal to or less than 0.')
+  if (c <= 0) { return console.error('The number of numbers prvoided is equal to or less than 0.') }
 
   // Ensures number is a whole number by rounding
   c = Math.round(c)
@@ -59,8 +57,8 @@ window.onerror = (msg, url, line) => {
   handlingError(msg, url, line)
 }
 
-window.addEventListener("DOMContentLoaded", (e) => {
-  document.getElementById("genBTN").addEventListener('click', (e) => {
+window.addEventListener('DOMContentLoaded', (e) => {
+  document.getElementById('genBTN').addEventListener('click', (e) => {
     gen()
   })
 })
