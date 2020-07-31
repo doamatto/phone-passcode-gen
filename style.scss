@@ -20,18 +20,7 @@ body {
   }
 }
 
-h1 {
-  font-size: 3em;
-  @media(max-width: 400px) {
-    font-size: 5em;
-  }
-}
-p {
-  font-size: 1em;
-  @media(max-width: 400px) {
-    font-size: 1.5em;
-  }
-}
+h1 { font-size: 3em; }
 
 .button {
   border: 1px solid #fff;
