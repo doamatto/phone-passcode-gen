@@ -1,5 +1,8 @@
 a {
-  color: #000;
+  color: #fff;
+  @media(prefers-color-scheme: light) {
+    color: #000;
+  }
   transition: .5s ease-in-out all;
   &:hover {
     color: #090979;
@@ -69,14 +72,30 @@ input[type=text] {
 }
 
 .tool {
-  background: #fff;
+  background: #000;
+  @media(prefers-color-scheme: light) {
+    background: #fff;
+  }
   border-radius: 2em;
   padding: 1em 1em 1em 1em;
   text-align: center;
   width: 50vw;
   @media(max-width: 400px) {
     width: 75vw;
+    height: 50vh;
   }
 }
 
-.copyright { font-size: 12px; }
+.copyright {
+  font-size: .80em;
+  @media(max-width: 400px) {
+    font-size: 1.5em;
+  }
+  a {
+    text-decoration: none;
+    color: #dbcafd;
+    @media(prefers-color-scheme: light) {
+      color: #7965a2;
+    }
+  }
+}
