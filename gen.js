@@ -59,8 +59,6 @@ window.onerror = (msg, url, line) => {
   handlingError(msg, url, line)
 }
 
-// TODO: Add function to button on DOMContentLoaded
-
 window.addEventListener("DOMContentLoaded", (e) => {
   document.getElementById("genBTN").addEventListener('click', (e) => {
     gen()
