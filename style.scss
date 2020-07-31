@@ -28,13 +28,14 @@ h1 { font-size: 3em; }
     border: 1px solid #000;
   }
   border-radius: 1em;
-  transition: .5s ease-in-out all;
+  transition: 100ms ease background;
   max-width: 30vw;
   max-height: 5vw;
+  margin: .5em auto;
   padding: .1em .1em;
   &:hover {
-    background: #090979;
-    color: #fff;
+    background: #d0fef1;
+    color: #000;
   }
 }
 
