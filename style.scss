@@ -49,10 +49,10 @@ h1 { font-size: 3em; }
 
 input[type=text] {
   border: 1px solid black;
-  border-radius: 1em;
-  padding-bottom: .25em;
-  padding-left: 1em;
-  padding-top: .25em;
+  max-width: 30vw;
+  max-height: 5vw;
+  margin: .5em auto;
+  padding: .1em .1em;
 }
 
 .passcode {
