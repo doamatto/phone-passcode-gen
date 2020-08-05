@@ -18,6 +18,7 @@ jobs:
       run: |
         yarn
         yarn global add eslint
+        export PATH="$(yarn global bin):$PATH"
     - name: Lint JS with ESlint
       run: eslint gen.js
       
