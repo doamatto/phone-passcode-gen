@@ -1,0 +1,22 @@
+name: "Lint CSS"
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest  
+    steps:
+    - uses: actions/checkout@v2
+    - name: Use Node.js 10.x
+      uses: actions/setup-node@v1.4.2
+      
+    - name: Lint CSS via Gulp
+      run: |
+        yarn
+        yarn global add gulp-cli
+        export PATH="$(yarn global bin):$PATH"
+        gulp compileSASS
