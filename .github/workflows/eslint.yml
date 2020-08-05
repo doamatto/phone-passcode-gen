@@ -21,9 +21,3 @@ jobs:
         yarn global add eslint
         export PATH="$(yarn global bin):$PATH"
         eslint gen.js
-      
-    - name: Lint CSS with CSSLint
-      run: |
-        yarn global add csslint
-        export PATH="$(yarn global bin):$PATH"
-        csslint style.css
