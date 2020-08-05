@@ -15,7 +15,9 @@ jobs:
       uses: actions/setup-node@v1.4.2
       
     - name: Install ESlint
-      run: yarn
+      run: |
+        yarn
+        yarn global add eslint
     - name: Lint JS with ESlint
       run: eslint gen.js
       
