@@ -14,13 +14,13 @@ jobs:
     - name: Use Node.js 10.x
       uses: actions/setup-node@v1.4.2
       
-    - name: Install ESlint
+    - name: Install ESlint deps
+      run: yarn
+    - name: Lint JS with ESlint
       run: |
-        yarn
         yarn global add eslint
         export PATH="$(yarn global bin):$PATH"
-    - name: Lint JS with ESlint
-      run: eslint gen.js
+        eslint gen.js
       
     - name: Lint CSS with CSSLint
       run: |
