@@ -58,7 +58,7 @@ window.onerror = (msg, url, line) => {
 }
 
 window.addEventListener('DOMContentLoaded', (e) => {
-  document.getElementsByClassName('applet')[0].style.display = "block";
+  document.getElementsByClassName('applet')[0].style.display = 'block'
   document.getElementById('genBTN').addEventListener('click', (e) => {
     gen()
   })
