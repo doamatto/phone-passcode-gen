@@ -24,7 +24,9 @@ function mini () {
       ext:{
         src:'.js',
         min:'.min.js'
-      }
+      },
+      noSource: true,
+      preserveComments: 'some'
     }))
     .pipe(dest('./docs/'))
 }
