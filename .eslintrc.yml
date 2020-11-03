@@ -1,6 +1,6 @@
 env:
   browser: true
-  es2020: true
+  es2021: true
   commonjs: true
 extends:
   - standard
