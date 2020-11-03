@@ -33,6 +33,7 @@ h1 { font-size: 3em; }
   max-height: 5vw;
   margin: .5em auto;
   padding: .1em .1em;
+  user-select: none;
   &:hover {
     background: #d0fef1;
     color: #000;
