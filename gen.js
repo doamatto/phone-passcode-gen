@@ -12,7 +12,7 @@ function gen () {
 
   // Check if value is a number
   try {
-    let n = Number(c)
+    const n = Number(c)
     if (isNaN(n)) { return console.error('Placeholder to throw error') }
   } catch (e) {
     return console.error('The number of numbers provided couldn\'t be converted to or isn\'t a real number')
@@ -30,7 +30,7 @@ function gen () {
   }
 
   // Converts numbers generated into a usable string
-  const pin = num.toString().replace(/,/g, '') // Removes commas from old array
+  let pin = num.toString().replace(/,/g, '') // Removes commas from old array
 
   // Put passcode into document
   document.getElementById('gen').style.display = 'block'
@@ -38,15 +38,13 @@ function gen () {
 
   // Wipe variables used in math
   c = null
-  n = null
   num = null
-  i = null
   pin = null
 }
 
 function handlingError (msg, url, line) {
   console.error('Error logged locally for when announced to user.')
-  let elm = document.getElementById('error')
+  const elm = document.getElementById('error')
   elm.innerHTML = (`An error has occured on line ${line} of ${url}. The following is what was captured: ${msg}`)
   elm.style.display = 'block'
   document.getElementById('passcode').style.display = 'none'
