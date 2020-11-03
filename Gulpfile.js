@@ -13,7 +13,7 @@ exports.compileSASS = sassCompile
 
 function eslint () {
   return src(['**/*.js', '!node_modules/**', '!docs/**'])
-    .pipe(es({fix: true}))
+    .pipe(es({ fix: true }))
     .pipe(es.format())
     .pipe(es.failAfterError())
 }
@@ -21,9 +21,9 @@ function eslint () {
 function mini () {
   return src(['gen.js', '!node_modules/**', '!docs/**'])
     .pipe(minify({
-      ext:{
-        src:'.js',
-        min:'.min.js'
+      ext: {
+        src: '.js',
+        min: '.min.js'
       },
       noSource: true,
       preserveComments: 'some'
