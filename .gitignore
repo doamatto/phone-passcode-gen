@@ -1,7 +1,8 @@
 # Dart
 .dart_tool/
 .packages
-
+build.exe
+./build
 
 # Node
 node_modules/
