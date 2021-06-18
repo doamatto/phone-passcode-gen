@@ -13,8 +13,5 @@
     "gulp-sass": "4.1.0",
     "gulp-sourcemaps": "3.0.0",
     "node-sass": "6.0.0"
-  },
-  "engines": {
-    "node": "12.x"
   }
 }
