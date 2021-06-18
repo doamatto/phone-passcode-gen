@@ -23,7 +23,7 @@ var sassPlugin = api.Plugin{
 				})
 				result, _ := transpiler.Execute(data)
 				return api.OnLoadResult{
-					Contents: &result,
+					Contents: &result.CSS,
 					Loader:   api.LoaderJSON,
 				}, nil
 			},
