@@ -3,7 +3,7 @@
 A simple passcode generator.
 
 ### Building
-1. Install [Golang](https://golang.org)
+1. Install [Golang](https://golang.org) and [gcc](https://gcc.gnu.org/) ([windows users](https://osdn.net/projects/mingw/))
 2. Build the binaries (`go build`)
 3. Run the builder (`./build`)
 
