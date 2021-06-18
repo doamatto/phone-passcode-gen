@@ -14,13 +14,14 @@ var sassPlugin = api.Plugin{
 		build.OnLoad(api.OnLoadOptions{Filter: `\.scss$`},
 			func(args api.OnLoadArgs) (api.OnLoadResult, error) {
 				scss, err := ioutil.ReadFile(args.Path)
+				data := string(scss)
 				if err != nil {
 					return api.OnLoadResult{}, err
 				}
 				transpiler, _ := libsass.New(libsass.Options{
 					OutputStyle: libsass.CompressedStyle,
 				})
-				result, _ := transpiler.Execute(scss)
+				result, _ := transpiler.Execute(data)
 				return api.OnLoadResult{
 					Contents: &result,
 					Loader:   api.LoaderJSON,
