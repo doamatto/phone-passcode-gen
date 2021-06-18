@@ -1,1 +1,10 @@
-vendor/
+# Dart
+.dart_tool/
+.packages
+
+
+# Node
+node_modules/
+
+# Both
+*.log
