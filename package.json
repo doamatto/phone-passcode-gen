@@ -1,7 +1,0 @@
-{
-  "license": "BSD-3-Clause",
-  "devDependencies": {},
-  "dependencies": {
-    "esbuild": "^0.12.9"
-  }
-}
