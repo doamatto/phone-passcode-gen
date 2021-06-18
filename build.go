@@ -38,7 +38,7 @@ func main() {
 		Outfile:     "gen.min.js",
 		Write:       true,
 	})
-	if len(result.Errors > 0) {
+	if len(result.Errors) > 0 {
 		os.Exit(1)
 	}
 	result2 := api.Build(api.BuildOptions{
@@ -48,7 +48,7 @@ func main() {
 		Outfile:     "gen.min.js",
 		Write:       true,
 	})
-	if len(result2.Errors > 0) {
+	if len(result2.Errors) > 0 {
 		os.Exit(1)
 	}
 }
