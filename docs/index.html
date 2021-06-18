@@ -1,10 +1,12 @@
 <!doctype html>
-<html>
+<html lang="en">
   <head>
     <meta charset="UTF-8">
     <title>Passcode Generator</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdn.doamatto.xyz/inter.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="A passcode generator. That's it.">
+    <link rel="stylesheet" href="style.css" media="all">
+    <link rel="stylesheet" href="https://cdn.doamatto.xyz/inter.min.css" media="all">
   </head>
   <body>
     <div class="centre">
@@ -23,8 +25,10 @@
           Developed by <a href="https://doamatto.xyz">doamatto.</a>
           <a href="https://github.com/doamatto/phone-passcode-gen">View&nbsp;the&nbsp;Source&nbsp;Code.</a>
           </p>
-          <p>How many digits do you want in your pin?</p>
-          <input type="text" class="form" id="pincount" placeholder="6" />
+          <label>
+            How many digits do you want in your pin?
+            <input type="text" class="form" id="pincount" placeholder="6">
+          </label>
           <p class="button" id="genBTN">Generate</p>
           <div id="gen">
           <h3 id="passcode">Huh. Something must have gone wrong. Please report this error on
@@ -36,7 +40,6 @@
         </div>
       </div>
     </div>
-    <script src="gen.min.js"></script>
-    <script async defer data-domain="git.doamatto.xyz" src="https://alpine.gcp.doamatto.xyz/js/plausible.js"></script>
+    <script src="gen.min.js" async></script>
   </body>
 </html>
