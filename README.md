@@ -1,11 +1,11 @@
-# Passcode Generator
-
-![CI](https://github.com/doamatto/phone-passcode-gen/workflows/CI/badge.svg)
+# Passcode Generator ![CI](https://github.com/doamatto/phone-passcode-gen/workflows/CI/badge.svg)
 
 A simple passcode generator.
 
 ### Building
-Ensure you have both [Node](https://nodejs.org) and [Yarn](https://yarnpkg.com) installed. Using Yarn, install `gulp-cli` globally (`yarn global add gulp-cli`), as well as install all the dependencies (`yarn`). Finally, simply run `gulp`. The applet will build into the `docs/` folder locally.
+1. Install [Golang](https://golang.org)
+2. Build the binaries (`go build`)
+3. Run the builder (`./build`)
 
-### Acknowledgments
-The version found at [ppg.doamatto.xyz](https://ppg.doamatto.xyz) is hosted by Vercel.
+Upload the `docs/` folder to your web server, or open it in your web browser to use.
+
