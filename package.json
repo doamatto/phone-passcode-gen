@@ -4,7 +4,9 @@
   },
   "scripts": {
     "build": "yarn run build:scss && yarn run build:ts",
+    "build:fast": "yarn run build:scss_fast && yarn run build:ts",
     "build:scss": "dart run build.dart",
+    "build:scss_fast": "./build",
     "build:ts": "esbuild --bundle gen.ts --minify --platform=browser --sourcemap --log-level=debug --outfile=docs/gen.min.js"
   }
 }
