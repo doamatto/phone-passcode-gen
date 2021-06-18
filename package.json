@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "esbuild": "^0.12.9"
+  },
+  "scripts": {
+    "build": "yarn run build:scss && yarn run build:ts",
+    "build:scss": "dart run build.dart",
+    "build:ts": "esbuild --bundle gen.ts --minify --platform=browser --sourcemap --log-level=debug --outfile=docs/gen.min.js"
+  }
+}
