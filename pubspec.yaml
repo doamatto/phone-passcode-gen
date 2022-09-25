@@ -2,7 +2,7 @@ name: ppg
 version: 2.0.0
 publish_to: none
 dev_dependencies:
-  sass: 1.35.1
+  sass: 1.55.0
   
 environment:
   sdk: '>=2.10.0 <3.0.0'
